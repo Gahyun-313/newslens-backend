@@ -41,6 +41,10 @@ public class News {
     @Column(columnDefinition = "TEXT")
     private String summary;
 
+    // 뉴스 제목 (원문 그대로, 가공 금지)
+    @Column(nullable = false, length = 500)
+    private String title;
+
     @Column(nullable = false, length = 1000, unique = true)
     private String url;
 
